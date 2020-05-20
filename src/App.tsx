@@ -1,25 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
-import Image from './components/Image';
-import './App.css';
+import NavBar from './components/NavBar';
+import Content from './components/Content';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Image source={logo} opaque />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar />
+      <Content />
     </div>
   );
 }
