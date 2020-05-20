@@ -2,13 +2,14 @@ import React from 'react';
 import { Container } from './styles';
 
 interface Props {
-    value: string
+    value: string;
+    align: "left" | "center" | "right";
 }
 
-const Text: React.FC<Props> = ({ value }) => {
+const Text: React.FC<Props> = ({ value, align }) => {
     return (
-        <Container>
-            <span>{value}</span>
+        <Container align={align}>
+            <p>{value}</p>
         </Container>
     )
 }
