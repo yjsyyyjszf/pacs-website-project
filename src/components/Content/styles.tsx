@@ -5,21 +5,23 @@ export const Container = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1.3rem;
 `;
 
 export const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: inline;
-    align-items: left;
-    width: 50%;
+    align-items: flex-start;
 `;
 
-export const infoContent = styled.div`
+export const InfoContent = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: inline;
-    align-items: left;
+    align-items: flex-start;
     width: 50%;
 `;
 
+export const ImageWrapper = styled.div`
+  display: flex;
+  width: 100%;
+`;
