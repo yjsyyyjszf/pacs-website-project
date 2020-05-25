@@ -1,15 +1,29 @@
 import React from 'react';
-import { Container } from './styles';
+import { Container, Span } from './styles';
 
 interface Props {
     value: string;
     align: "left" | "center" | "right";
+    fontWeight?: 200 | 600 | 800;
 }
 
-const Text: React.FC<Props> = ({ value, align }) => {
+const Text: React.FC<Props> = ({ value, align, fontWeight }) => {
+    const handleFontWeight = (): number => {
+        switch (fontWeight) {
+            case 200:
+                return 200;
+            case 600:
+                return 600;
+            case 800:
+                return 800;
+            default:
+                return 400;
+        }
+    }
+
     return (
         <Container align={align}>
-            <p>{value}</p>
+            <Span weight={handleFontWeight()}>{value}</Span>
         </Container>
     )
 }
