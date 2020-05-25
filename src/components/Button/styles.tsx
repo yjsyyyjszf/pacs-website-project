@@ -1,14 +1,13 @@
 import styled from 'styled-components';
+import {Theme} from "../../assets/theme";
 
 export const Wrapper = styled.div`
     cursor: pointer;
     width: 18em;
-    
-    &:hover { background: lime }
 `;
 
 export const Container = styled.div<{ flat?: boolean }>`
-    background: ${({ flat }) => flat ? 'transparent' : 'blue' };
+    background: ${({ flat }) => flat ? 'transparent' : Theme.red };
     border-radius: 6px;
     padding: ${({ flat }) => flat ? '0.6em' : '1.5em' };
     display: flex;
