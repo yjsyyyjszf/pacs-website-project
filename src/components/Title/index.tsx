@@ -4,13 +4,13 @@ import { Container } from './styles';
 interface Props {
     value: string;
     align: "left" | "center" | "right";
-
+    main?: boolean;
 }
 
-const Title: React.FC<Props> = ({ value, align }) => {
+const Title: React.FC<Props> = ({ value, align, main }) => {
     return (
-        <Container align={align}>
-            <p>{value}</p>
+        <Container align={align} main={main}>
+            <span>{value}</span>
         </Container>
     )
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Theme} from "../../assets/theme";
 
 const checkAlign = (align: string) => {
     switch (align) {
@@ -11,9 +12,10 @@ const checkAlign = (align: string) => {
     }
 }
 
-export const Container = styled.div<{align: string}>`
+export const Container = styled.div<{align: string, main?: boolean}>`
     display: flex;
-    font-size: 5rem;
-    font-weight: bold;
-    Justify-content: ${({ align }) => checkAlign(align)};
+    font-weight: ${({ main }) => !!main ? 600 : 400};
+    font-size: ${({ main }) => !!main ? Theme.xl : Theme.lg};
+    justify-content: ${({ align }) => checkAlign(align)};
+    line-height: 1.1em;
 `;
