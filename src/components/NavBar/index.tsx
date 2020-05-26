@@ -1,13 +1,15 @@
 import React from 'react';
 import Button from '../Button';
-import { Container, ActionsContainer, ButtonsContainer } from './styles';
+import { Container, ActionsContainer, ButtonsContainer, ImageWrapper } from './styles';
 import Image from '../Image';
-import logo from '../../logo.svg';
+import logo from '../../assets/images/logo.svg';
 
 const NavBar: React.FC = () => {
     return (
         <Container>
-            <Image source={logo} align="left" />
+            <ImageWrapper>
+              <Image source={logo} align="left" />
+            </ImageWrapper>
             <ActionsContainer>
                 <ButtonsContainer>
                     <Button label="Sobre" onClick={() => alert('HELLO BOI')} flat />
