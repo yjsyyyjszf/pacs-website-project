@@ -3,8 +3,9 @@ export const Theme = {
   white: "#FFF",
   black: "#000",
   green: "#81B398",
-  sm: "0.96rem",
+  blue: "#00BEC5",
+  sm: "0.9rem",
   md: "1.2rem",
   lg: "4rem",
-  xl: "4.8rem"
+  xl: "5.5rem"
 }
