@@ -17,9 +17,25 @@ export const Container = styled.div<{align: string}>`
     justify-content: ${({ align }) => checkAlign(align)};
 `;
 
-export const Span = styled.span<{ weight: number }>`
+export const Span = styled.span<{ weight: number, withDash: boolean }>`
   font-size: ${Theme.md};
-  font-family: 'Poppins', sans-serif;
   line-height: 1.2;
   font-weight: ${({ weight }) => weight};
+  position: relative;
+  
+  ${({withDash}) => withDash 
+    ? `margin-left: 1.5rem;
+     
+      &::before {
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 10px;
+        width: 15px;
+        height: 3px;
+        background: ${Theme.red};
+      }` 
+    : 
+      ''
+    }
 `;
