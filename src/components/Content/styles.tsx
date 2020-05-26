@@ -4,24 +4,28 @@ export const Container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 1.3rem;
+    margin-top: 1rem;
+    padding: 2rem 0;
+    height: 80vh;
 `;
 
 export const TextContainer = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between; 
+    width: 40%;
 `;
 
 export const InfoContent = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
+    justify-content: space-between;
+    height: 20vh;
+    margin-top: 2rem;
 `;
 
 export const ImageWrapper = styled.div`
   display: flex;
-  width: 100%;
+  width: 60%;
+  margin-left: 2rem;
 `;
