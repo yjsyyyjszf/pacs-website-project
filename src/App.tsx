@@ -1,13 +1,15 @@
 import React from 'react';
 import NavBar from './components/NavBar';
 import Content from './components/Content';
+import "./index.css";
 
 function App() {
   return (
-    <div>
+    <>
       <NavBar />
       <Content />
-    </div>
+      <h1>me mama jr</h1>
+    </>
   );
 }
 
