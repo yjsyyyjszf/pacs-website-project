@@ -12,10 +12,12 @@ const checkAlign = (align: string) => {
     }
 }
 
-export const Container = styled.div<{align: string, main?: boolean}>`
+
+export const Container = styled.div<{align: string, main?: boolean, colors?: boolean}>`
     display: flex;
     font-weight: ${({ main }) => !!main ? 600 : 400};
     font-size: ${({ main }) => !!main ? Theme.xl : Theme.lg};
     justify-content: ${({ align }) => checkAlign(align)};
+    color: ${({ colors}) => !!colors ? Theme.white : Theme.black};
     line-height: 1.1em;
 `;

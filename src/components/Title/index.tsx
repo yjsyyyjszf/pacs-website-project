@@ -5,11 +5,12 @@ interface Props {
     value: string;
     align: "left" | "center" | "right";
     main?: boolean;
+    colors?: boolean;
 }
 
-const Title: React.FC<Props> = ({ value, align, main }) => {
+const Title: React.FC<Props> = ({ value, align, main, colors}) => {
     return (
-        <Container align={align} main={main}>
+        <Container align={align} main={main} colors={colors}>
             <span>{value}</span>
         </Container>
     )
