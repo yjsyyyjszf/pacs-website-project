@@ -1,6 +1,9 @@
 import React from 'react';
 import NavBar from './components/NavBar';
 import Content from './components/Content';
+import BottonContainer from './components/BottonContainer'
+import InfoContainer from './components/InfoContainer'
+import BottonBar from './components/BottonBar'
 import "./index.css";
 
 function App() {
@@ -8,7 +11,9 @@ function App() {
     <>
       <NavBar />
       <Content />
-      <h1>me mama jr</h1>
+      <InfoContainer />
+      <BottonContainer />
+      <BottonBar />
     </>
   );
 }
