@@ -5,10 +5,11 @@ interface Props {
     value: string;
     align: "left" | "center" | "right";
     fontWeight?: 200 | 600 | 800;
+    colors?: boolean;
     withDash?: boolean;
 }
 
-const Text: React.FC<Props> = ({ value, align, fontWeight, withDash }) => {
+const Text: React.FC<Props> = ({ value, align, fontWeight, withDash, colors }) => {
     const handleFontWeight = (): number => {
         switch (fontWeight) {
             case 200:
@@ -24,7 +25,7 @@ const Text: React.FC<Props> = ({ value, align, fontWeight, withDash }) => {
 
     return (
         <Container align={align}>
-            <Span weight={handleFontWeight()} withDash={!!withDash}>{value}</Span>
+            <Span weight={handleFontWeight()} withDash={!!withDash} colors={!!colors}>{value}</Span>
         </Container>
     )
 }
